@@ -38,14 +38,13 @@ async function Update( username, password, msg, topic, contents, debug = false )
         if ( debug ) console.dir( "Session: ", session );
 
         session = await login( session, username, password, debug );
-        doUpdate( session, msg, topic, contents, debug );
+        await doUpdate( session, msg, topic, contents, debug );
         return true;
     } catch (e) {
         console.error( e );
         return false;
     }
 }
-
 
 function getSessionInfo( response ){
     var session = {

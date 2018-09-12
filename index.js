@@ -155,4 +155,4 @@ function getEditFormUrl( msg, topic ){
     return `${FORUM}?action=post;msg=${msg};topic=${topic}`;
 }
 
-module.exports.default = Update;
+module.exports = Update;
